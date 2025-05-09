@@ -55,6 +55,10 @@
       font-weight: bold;
       color: #fff;
     }
+    nonsummary {
+      font-weight: bold;
+      color: #f0f0f0;
+    }
     footer {
       text-align: center;
       padding: 2em;
@@ -77,16 +81,15 @@
     <div class="platform">
       <h3>MacOS</h3>
       <p>x86</p>
-      <p class="highlight">
-        <details>
-          ARM64 *
-          <p>ARM64 (Beta v1)</p>
-          <p><a href="https://github.com/kmutiso68/Prospera/releases/download/Prospera/Prospera.pkg" download>Download Prospera for ARM64</a></p>
-          
-          <p>ARM64 (Version 1.1)</p>
-          <p><a href="https://github.com/kmutiso68/Prospera/releases/download/ProsperaV1.1/Prospera.pkg" download>Download Prospera for ARM64</a></p>
-        </details>
-      </p>
+      <details>
+        <nonsummary>ARM64 *</nonsummary>
+        <p>ARM64 (Beta v1)</p>
+        <p><a href="https://github.com/kmutiso68/Prospera/releases/download/Prospera/Prospera.pkg" download>Download Prospera for ARM64</a></p>
+        
+        <p>ARM64 (Version 1.1)</p>
+        <p><a href="https://github.com/kmutiso68/Prospera/releases/download/ProsperaV1.1/Prospera.pkg" download>Download Prospera for ARM64</a></p>
+      </details>
+      
       <details>
         <summary>About ARM64</summary>
         <p>For Mac devices (2020+) with Apple Silicon (M1, M2, etc.)</p>
@@ -106,20 +109,19 @@
     </div>
   </div>
 
-  <p>
-    <h3>Disclaimer</h3>
-    This project uses JavaFX, which is licensed under the GNU General Public License, version 2, with the Classpath Exception. 
-    See https://openjdk.org/legal/gplv2+ce.html for details. 
-    Our software itself, however, is licensed under the MIT License.
-    <br />
-    <br />
-    Links to external websites are provided solely for the convenience of Prospera users. 
-    Prospera has no affiliation with, responsibility for, or control over these non-Prospera websites. 
-    We make no guarantees or warranties of any kind, whether express or implied, regarding the content, accuracy, or functionality of these linked sites. 
-    In no event shall Prospera be liable for any damages arising from the use of these external links, even if we have been advised of the possibility of such damages.
-  </p>
-
   <footer>
+    <p>
+      <h3>Disclaimer</h3>
+      This project uses JavaFX, which is licensed under the GNU General Public License, version 2, with the Classpath Exception. 
+      See https://openjdk.org/legal/gplv2+ce.html for details. 
+      Our software itself, however, is licensed under the MIT License.
+      <br />
+      <br />
+      Links to external websites are provided solely for the convenience of Prospera users. 
+      Prospera has no affiliation with, responsibility for, or control over these non-Prospera websites. 
+      We make no guarantees or warranties of any kind, whether express or implied, regarding the content, accuracy, or functionality of these linked sites. 
+      In no event shall Prospera be liable for any damages arising from the use of these external links, even if we have been advised of the possibility of such damages.
+    </p>
     &copy; 2025 Prospera. All rights reserved.
   </footer>
 </body>
