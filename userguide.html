@@ -1,9 +1,220 @@
 <!DOCTYPE html>
-<html lang="en>
-  <head>
-    <title>User Guide</title>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospera - User Installation Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .requirements {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 25px;
+        }
+        .step {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .faq {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        .note {
+            font-style: italic;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>Prospera - User Installation Guide</h1>
+            <p>This guide will help you install Prospera on your ARM-based Mac.</p>
+        </div>
+        <div class="logo-container">
+            <div class="logo">Prospera</div>
+        </div>
+    </div>
+
+    <div class="requirements">
+        <h2>System Requirements</h2>
+        <ul>
+            <li><strong>Operating System:</strong> macOS</li>
+            <li><strong>Architecture:</strong> ARM-based Mac (Apple Silicon)</li>
+            <li><strong>Terminal:</strong> Required for installation</li>
+        </ul>
+    </div>
+
+    <h2>Installation Process</h2>
+    <p>Once downloaded, head to where you installed it; if not sure where it is look for the searchbar in finder and type in Prospera.pkg (if you don't see it, try installing again); if you try to double click the pkg, apple's built in OS security tool will display a dialog reporting cannot verify that app does not have malware.</p>
+
+    <div class="warning">
+        <strong>Important:</strong> Do not select "Move to Bin"
+    </div>
+
+    <h3>Installation Steps:</h3>
+
+    <div class="step">
+        <span class="step-number">1.</span>
+        Right click on the pkg file
+    </div>
+    <div class="step">
+        <span class="step-number">2.</span>
+        Click on "Get Info"
+    </div>
+    <div class="step">
+        <span class="step-number">3.</span>
+        Look for the "Where" section and copy the text you find there, starting from the word "Users" all the way till the last word in the where section
+    </div>
+    <div class="step">
+        <span class="step-number">4.</span>
+        Paste this command somewhere (i.e., Notes or somewhere else) - we will refer to it later, this is known as your file path
+    </div>
+    <div class="step">
+        <span class="step-number">5.</span>
+        If you know how to open Terminal go ahead and open it, if not: press and hold briefly (start by holding down the command key then pressing the spacebar) the command key and the space bar together, you should see the word Spotlight Search
+    </div>
+    <div class="step">
+        <span class="step-number">6.</span>
+        Type in "Terminal" and press Enter
+    </div>
+    <div class="step">
+        <span class="step-number">7.</span>
+        Welcome to Terminal, paste the following command on the terminal, do not press enter yet, if you did go back to step 5:
+        <br>
+        <code>sudo xattr -rd com.apple.quarantine</code>
+    </div>
+    <div class="step">
+        <span class="step-number">8.</span>
+        Press spacebar (it should be the pasted command, then one space)
+    </div>
+    <div class="step">
+        <span class="step-number">9.</span>
+        Paste the file path you saved somewhere (the one from notes or wherever you saved/pasted it), your terminal should now have <code>sudo xattr -rd com.apple.quarantine &lt;path&gt;</code>, now press Enter
+    </div>
+    <div class="step">
+        <span class="step-number">10.</span>
+        Congratulations! We have bypassed Apple's OS security tool that blocks installation of this pkg. Do not worry, we have only done this for this app, the security feature itself has not been disabled
+    </div>
+    <div class="step">
+        <span class="step-number">11.</span>
+        Do not worry, your Mac will remember this choice so you won't need to run this command again
+    </div>
+    <div class="step">
+        <span class="step-number">12.</span>
+        Close Terminal
+    </div>
+    <div class="step">
+        <span class="step-number">13.</span>
+        You can now double click the pkg to install Prospera
+    </div>
+
+    <div class="note">
+        <p>Despite all this we are still not done, as the app will not run directly. The developer of this app is in the process of obtaining their developer certificate from Apple which unfortunately affects the running of this app. Apologies for the inconvenience, this will be fixed in future iterations.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">14.</span>
+        Right click on the app (if you don't know where it is, it should be in your Applications folder in Finder)
+    </div>
+    <div class="step">
+        <span class="step-number">15.</span>
+        Click on "Show Package Contents"
+    </div>
+    <div class="step">
+        <span class="step-number">16.</span>
+        Click on Contents/open Contents folder, click on MacOS/open MacOS folder
+    </div>
+    <div class="step">
+        <span class="step-number">17.</span>
+        You should see a file called Fundingplatform (a unix executable file don't worry about what this means), this is the application
+    </div>
+    <div class="step">
+        <span class="step-number">18.</span>
+        Finally, open the file (double click it)
+    </div>
+
+    <div class="success">
+        <p>If it runs, congratulations on successfully installing Prospera and thank you for your patience!</p>
+        <p>If it doesn't run, please check the FAQs section below.</p>
+    </div>
+
+    <div class="faq">
+        <h2>FAQs</h2>
+        <h3>Why didn't the app run?</h3>
+        <p>Something must have gone wrong in either the installation process or, storage of the file, or maybe (less likely) something more subtle.</p>
+        
+        <h3>I'm still having issues with the installation. What should I do?</h3>
+        <p>Please contact our support team at support@prospera.com with details about the issue you're experiencing.</p>
+        
+        <h3>Will future updates require the same installation process?</h3>
+        <p>No, once we obtain our developer certificate from Apple, future updates will follow the standard installation process.</p>
+    </div>
+
+    <footer style="margin-top: 40px; text-align: center; color: #6c757d; font-size: 0.9em;">
+        <p>© 2025 Prospera. All rights reserved.</p>
+    </footer>
+</body>
 </html>
